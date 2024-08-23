@@ -55,3 +55,8 @@ def initialize_database():
         finally:
             connection.close()
 
+# initialize the database
+if __name__ == "__main__":
+    if not os.path.exists('./Banking_Database'):
+        os.makedirs('./Banking_Database')
+    initialize_database()
